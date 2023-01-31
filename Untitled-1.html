@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdTech Website with Tailwind</title>
+    <script src="https://kit.fontawesome.com/61673d36fe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav
+            class="container mx-auto sm:px-10 navbar navbar-expand-lg py-2 bg-white relative flex items-center w-full justify-between">
+            <div>
+                <h1 class="lg:text-4xl md:text-3xl sm:text-3xl font-bold">SHT Academy</h1>
+            </div>
+            <div class="md:flex-row-reverse flex lg:flex-row md:px-0 lg:justify-between">
+                <div class="flex flex-wrap items-center justify-between">
+                    <div class="flex items-center">
+                        <button
+                            class="navbar-toggler border-0 py-3 lg:hidden md:block leading-none  text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out mr-2"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContentY"
+                            aria-controls="navbarSupportedContentY" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-5" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                    d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse grow items-center" id="navbarSupportedContentY">
+                        <ul class="navbar-nav mr-auto lg:flex lg:flex-row">
+                            <li class="nav-item">
+                                <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-white hover:bg-blue-500 mx-4 text-2xl focus:text-gray-700 transition duration-150 ease-in-out"
+                                    href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-white hover:bg-blue-500 mx-4 text-2xl focus:text-gray-700 transition duration-150 ease-in-out"
+                                    href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Courses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-white hover:bg-blue-500 mx-4 text-2xl focus:text-gray-700 transition duration-150 ease-in-out"
+                                    href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Deals</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-white hover:bg-blue-500 mx-4 text-2xl focus:text-gray-700 transition duration-150 ease-in-out"
+                                    href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Success</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-white hover:bg-blue-500 mx-4 text-2xl focus:text-gray-700 transition duration-150 ease-in-out"
+                                    href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">About</a>
+                            </li>
+                            <li class="nav-item mb-2 lg:mb-0">
+                                <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-white hover:bg-blue-500 mx-4 text-2xl focus:text-gray-700 transition duration-150 ease-in-out"
+                                    href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sm:hidden md:block md:mr-8">
+                    <button
+                        class="border-solid border-2   border-blue-700 px-4 py-1 font-semibold text-2xl">Register</button>
+                </div>
+            </div>
+        </nav>
+
+        <section class="sm:px-5">
+            <div id="carouselExampleCaptions" class="container mx-auto carousel slide relative" data-bs-ride="carousel">
+                <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner relative w-full overflow-hidden">
+                    <div class="carousel-item active relative float-left w-full">
+                        <img src="images/cover/cover-1.png" class="opacity-70 block w-full" alt="..." />
+                        <div class="carousel-caption  absolute text-center">
+                            <h5 class="sm:text-3xl lg:text-5xl">Get Started Digital <br> Learning</h5>
+                            <p class="lg:text-2xl">It is a long established fact that a reader will be distracted by the
+                                readable content of
+                                a page when looking at its layout.</p>
+                            <button class="bg-blue-500 px-4 py-1 mt-2 rounded-sm text-2xl font-semibold">Get
+                                Started</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item relative float-left w-full">
+                        <img src="images/cover/cover-2.jpg" class="opacity-70 block w-full" alt="..." />
+                        <div class="carousel-caption absolute text-center">
+                            <h5 class="sm:text-3xl lg:text-5xl">Get Started Digital <br> Learning</h5>
+                            <p class="lg:text-2xl">It is a long established fact that a reader will be distracted by the
+                                readable content of
+                                a page when looking at its layout.</p>
+                            <button class="bg-blue-500 px-4 py-1 mt-2 rounded-sm text-2xl font-semibold">Get
+                                Started</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item relative float-left w-full">
+                        <img src="images/cover/cover-3.jpg" class="opacity-70 block w-full" alt="..." />
+                        <div class="carousel-caption absolute text-center">
+                            <h5 class="sm:text-3xl lg:text-5xl">Get Started Digital <br> Learning</h5>
+                            <p class="lg:text-2xl">It is a long established fact that a reader will be distracted by the
+                                readable content of
+                                a page when looking at its layout.</p>
+                            <button class="bg-blue-500 px-4 py-1 mt-2 rounded-sm text-2xl font-semibold">Get
+                                Started</button>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                    type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                    type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+    </header>
+
+    <main class="container mx-auto sm:px-5">
+        <!-- Courses -->
+        <section>
+            <div class="text-center my-12">
+                <h1 class="text-5xl font-semibold">Discover Our Popular <br>Courses</h1>
+                <p class="text-lg text-slate-500 my-2">It is a long established fact that a reader will be distracted by
+                    the
+                    readable <br>
+                    content of a page when looking at its layout.</p>
+            </div>
+            <!-- courses grid -->
+            <div class="grid lg:grid-cols-2 gap-4">
+                <div
+                    class="md:flex md:flex-row items-center hover:shadow-2xl border border-slate-200 rounded bg-slate-50">
+                    <div class="md:w-1/2">
+                        <img class="sm:w-full md:h-60 sm:h-80" src="images/course/course-1.png" alt="">
+                    </div>
+                    <div class="w-full pl-5">
+                        <h1 class="text-3xl font-semibold">Fundamental Of UI/UX Design</h1>
+                        <p class="text-lg">The UI/UX Design Specialization brings a design-centric approach to user
+                            interface and user experience design, and offers practical, skill-based instruction.</p>
+                        <p class="text-lg font-semibold text-blue-700">Price: 20$</p>
+                    </div>
+                </div>
+
+                <div
+                    class="md:flex md:flex-row  items-center hover:shadow-2xl border border-slate-200 rounded bg-slate-50">
+                    <div class="md:w-1/2">
+                        <img class="w-full md:h-60 sm:h-80" src="images/course/course-2.png" alt="">
+                    </div>
+                    <div class="w-full pl-5">
+                        <h1 class="text-3xl font-semibold">Javascript Basic to advanced</h1>
+                        <p class="text-lg">Basics of JavaScript (Data types, Loops, Arrays, Objects, Functions,
+                            etc).Introduction to Document Object Model(DOM).OOPs concepts in JavaScript.</p>
+                        <p class="text-lg font-semibold text-blue-700">Price: 20$</p>
+                    </div>
+                </div>
+
+                <div
+                    class="md:flex md:flex-row items-center hover:shadow-2xl border border-slate-200 rounded bg-slate-50">
+                    <div class="md:w-1/2">
+                        <img class="w-full md:h-60 sm:h-80" src="images/course/course-3.png" alt="">
+                    </div>
+                    <div class="w-full pl-5">
+                        <h1 class="lg:text-3xl sm:text-2xl font-semibold">Fullstack Web Development</h1>
+                        <p class="text-lg">Full stack development is the end-to-end development of applications. It
+                            includes both the front end and back end of an application. The front end is usually
+                            accessed by a client, </p>
+                        <p class="text-lg font-semibold text-blue-700">Price: 20$</p>
+                    </div>
+                </div>
+                <div
+                    class="sm:hidden md:hidden lg:block flex items-center hover:shadow-2xl border border-slate-200 rounded bg-slate-50">
+                    <div class="md:w-1/2">
+                        <img class="w-full" src="images/course/course-4.png" alt="">
+                    </div>
+                    <div class="w-full pl-5">
+                        <h1 class="text-3xl font-semibold">Digital Marketing</h1>
+                        <p class="text-lg">Digital marketing, also known as online marketing, refers to advertising
+                            delivered through digital channels to promote brands and connect potential customers using
+                            the internet</p>
+                        <p class="text-lg font-semibold text-blue-700">Price: 20$</p>
+                    </div>
+                </div>
+                <div
+                    class="sm:hidden md:hidden lg:block flex items-center hover:shadow-2xl border border-slate-200 rounded bg-slate-50">
+                    <div class="md:w-1/2">
+                        <img class="w-full" src="images/course/course-5.png" alt="">
+                    </div>
+                    <div class="w-full pl-5">
+                        <h1 class="text-3xl font-semibold">Photography Basic Rules</h1>
+                        <p class="text-lg">Fill The Frame / Cropping. ... Don't Cut Off Limbs. ... Understand The Rule
+                            Of Thirds. ... Use Frames. ...</p>
+                        <p class="text-lg font-semibold text-blue-700">Price: 20$</p>
+                    </div>
+                </div>
+                <div
+                    class="sm:hidden md:hidden lg:block flex  items-center hover:shadow-2xl border border-slate-200 rounded bg-slate-50">
+                    <div class="md:w-1/2">
+                        <img class="w-full" src="images/course/course-6.png" alt="">
+                    </div>
+                    <div class="w-full pl-5">
+                        <h1 class="text-3xl font-semibold">Motion Graphics</h1>
+                        <p class="text-lg">Motion graphics designers, sometimes just called motion designers, create
+                            artwork for the web, television or film. This could include movie clips, trailers,
+                            commercials, title sequences, etc</p>
+                        <p class="text-lg font-semibold text-blue-700">Price: 20$</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-center my-10">
+                <button class="text-white bg-blue-500 text-3xl px-4 py-2 rounded">See More Courses</button>
+            </div>
+        </section>
+
+        <section>
+            <!-- Explore -->
+            <div class="flex sm:flex-col bg-sky-50 items-center my-5">
+                <div class="md:w-1/2">
+                    <img class="md:w-full md:h-screen" src="images/working.png" alt="">
+                </div>
+
+                <div class="lg:ml-8 w-1/2 md:w-1/2">
+                    <div class="sm:p-4">
+                        <div>
+                            <h1 class="sm:text-3xl lg:text-6xl font-bold">Explore The elearning <br> Institute</h1>
+                            <p class="sm:text-lg sm:font-serif lg:text-2xl  break-words text-gray-500">There are
+                                many variations of
+                                passages of Lorem Ipsum available, but the majority have
+                                suffered alteration in some form, by injected humour, or randomised words which don't
+                                look even slightly believable. If you are going to use a passage of Lorem Ipsum, you
+                                need to be sure.
+                                <br>
+                                <br>
+                                Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on
+                                the Internet tend to repeat predefined.
+                            </p>
+                        </div>
+                        <div class="grid lg:grid-cols-3 sm:pt-5 sm:grid-cols-2">
+                            <div class="mr-12">
+                                <h1 class="lg:text-5xl sm:text-4xl font-bold">3.2K+</h1>
+                                <p class="font-serif text-2xl text-gray-500">Online Course</p>
+                            </div>
+                            <div class="mr-12">
+                                <h1 class="lg:text-5xl sm:text-4xl font-bold">600+</h1>
+                                <p class="font-serif text-2xl text-gray-500">Expert memeber</p>
+                            </div>
+                            <div class="mr-12">
+                                <h1 class="lg:text-5xl sm:text-4xl font-bold">1K+</h1>
+                                <p class="font-serif text-2xl text-gray-500">Rating & Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="text-white text-2xl bg-blue-500 my-4 px-4 py-2 sm:ml-5 rounded">Read More</button>
+                </div>
+            </div>
+        </section>
+        <!-- Meet Our Successfull Students -->
+        <section class="my-16">
+            <div>
+                <h1 class="lg:text-5xl font-sans sm:text-3xl sm:text-center sm:px-32 font-bold">Meet Our Successfull
+                    Students</h1>
+                <p class="text-2xl font-serif sm:hidden text-gray-600">It is a long established fact that a reader
+                    will be
+                    distracted by the
+                    <br> readable content of a page
+                    when looking at its layout.
+                </p>
+                <p class="sm:text-xl lg:hidden font-serif sm:px-5 sm:text-center text-gray-600">It is a long established
+                    fact that
+                    a
+                    reader
+                    will be
+                    distracted by the
+                    readable content of a page
+                    when looking at its layout.
+                </p>
+            </div>
+            <div class=" grid lg:grid-cols-4 gap-4 mt-10 sm:mx-10">
+                <div class="border-solid border-2 border-gray-200 rounded-lg mb-5">
+                    <img class="w-full" src="images/student/student-1.png" alt="image">
+                    <div class="m-4 sm:text-center lg:text-left">
+                        <h1 class="text-2xl sm:font-serif sm:font-semibold sm:text-gray-600 text-gray-900">Awlad Hossain
+                        </h1>
+                        <p class="text-2xl text-gray-600 ">UIUX Designer</p>
+                    </div>
+                </div>
+                <div class="border-solid border-2 border-gray-200  rounded-lg mb-5">
+                    <img class="w-full" src="images/student/student-2.png" alt="image">
+                    <div class="m-4 sm:text-center  lg:text-left">
+                        <h1 class="text-2xl sm:font-serif sm:font-semibold sm:text-gray-600 text-gray-900">Jannatul
+                            Islam</h1>
+                        <p class="text-2xl text-gray-600">Motion Designer</p>
+                    </div>
+                </div>
+                <div class="border-solid border-2 border-gray-200 rounded-lg mb-5">
+                    <img class="w-full" src="images/student/student-3.png" alt="image">
+                    <div class="m-4 sm:text-center lg:text-left">
+                        <h1 class="text-2xl sm:font-serif sm:font-semibold sm:text-gray-600 text-gray-900">Imran Hossain
+                        </h1>
+                        <p class="text-2xl text-gray-600">Graphic Designer</p>
+                    </div>
+                </div>
+                <div class="border-solid border-2 border-gray-200 rounded-lg mb-5">
+                    <img class="w-full" src="images/student/student-4.png" alt="image">
+                    <div class="m-4 sm:text-center lg:text-left">
+                        <h1 class="text-2xl sm:font-serif sm:font-semibold sm:text-gray-600 text-gray-900">Nishi Akter
+                        </h1>
+                        <p class="text-2xl text-gray-600">Web Development</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button
+                    class="text-white bg-blue-500 mb-10 px-6 py-2 sm:px-10 sm:py-5 sm:text-2xl rounded text-2xl">View
+                    All</button>
+            </div>
+        </section>
+
+        <!-- student feedback -->
+        <section class="mt-5">
+
+            <div class="text-center font-serif">
+                <h1 class="lg:text-5xl sm:text-4xl sm:px-28 font-bold">Some Students Feedback</h1>
+                <p class="text-2xl sm:hidden text-gray-700">It is a long established fact that a reader will be
+                    distracted by the
+                    readable <br> content of a page when looking at its layout.</p>
+                <p class="text-2xl lg:hidden text-gray-700">It is a long established fact that a reader will be
+                    distracted by the
+                    readable content of a page when looking at its layout.</p>
+            </div>
+
+            <!-- student feedback carousel -->
+
+            <div id="carouselExampleCaptions" class="sm:hidden md:block my-10 mx-20 carousel slide relative"
+                data-bs-ride="carousel">
+                <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                </div>
+                <div class="carousel-inner relative w-full overflow-hidden">
+                    <div class="carousel-item active relative float-left w-full">
+                        <div class="flex">
+                            <div class=" border border-gray-300 px-10 mx-3">
+                                <div class="flex justify-between my-7">
+                                    <img src="images/comma.png" alt="">
+                                    <div>
+                                        <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
+                                        <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
+                                        <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
+                                        <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
+                                        <i class="fa-regular text-amber-200 text-2xl fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="text-lg my-4">There are many variations of passages of Lorem Ipsum
+                                    available, but the
+                                    majority have suffered
+                                    alteration in some form, by injected humour, or randomised words which don't
+                                    look even slightly
+                                    believable. If you are going to use a passage of Lorem.</p>
+                                <div class="flex mb-5">
+                                    <div class="mt-2 items-center">
+                                        <img class="" src="images/student/student-5.png" alt="">
+                                    </div>
+                                    <div class="ml-2">
+                                        <h1 class="text-2xl text-gray-900">Awlad Hossain</h1>
+                                        <p class="text-lg text-gray-600">UIUX Designer</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class=" border border-gray-300 px-10 mx-3">
+                                <div class="flex justify-between my-7">
+                                    <img src="images/comma.png" alt="">
+                                    <div>
+                                        <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
+                                        <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
+                                        <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
+                                        <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
+                                        <i class="fa-regular text-amber-200 text-2xl fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="text-lg my-4">There are many variations of passages of Lorem Ipsum
+                                    available, but the
+                                    majority have suffered
+                                    alteration in some form, by injected humour, or randomised words which don't
+                                    look even slightly
+                                    believable. If you are going to use a passage of Lorem.</p>
+                                <div class="flex mb-5">
+                                    <div class="mt-2 items-center">
+                                        <img class="" src="images/student/student-6.png" alt="">
+                                    </div>
+                                    <div class="ml-2">
+                                        <h1 class="text-2xl text-gray-900">Santa Akter</h1>
+                                        <p class="text-lg text-gray-600">Graphic Designer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline -left-24"
+                    type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="bg-blue-500 rounded-full p-5 carousel-control-prev-icon inline-block bg-no-repeat"
+                        aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center  text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline cursor-pointer -right-24"
+                    type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="bg-blue-800 rounded-full p-5 carousel-control-next-icon inline-block bg-no-repeat"
+                        aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <!-- for small device -->
+            <div class="flex flex-col mb-7 lg:hidden md:hidden">
+                <div class="mb-5 border border-gray-300 px-10 mx-3">
+                    <div class="flex justify-between my-7">
+                        <img src="images/comma.png" alt="">
+                        <div>
+                            <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
+                            <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
+                            <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
+                            <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
+                            <i class="fa-regular text-amber-200 text-2xl fa fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-lg my-4">There are many variations of passages of Lorem Ipsum
+                        available, but the
+                        majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't
+                        look even slightly
+                        believable. If you are going to use a passage of Lorem.</p>
+                    <div class="flex mb-5">
+                        <div class="mt-2 items-center">
+                            <img class="" src="images/student/student-5.png" alt="">
+                        </div>
+                        <div class="ml-2">
+                            <h1 class="text-3xl sm:text-gray-500 sm:font-semibold text-gray-900">Awlad Hossain</h1>
+                            <p class="text-2xl text-gray-500">UI Designer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" border border-gray-300 px-10 mx-3">
+                    <div class="flex justify-between my-7">
+                        <img src="images/comma.png" alt="">
+                        <div>
+                            <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
+                            <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
+                            <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
+                            <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
+                            <i class="fa-regular text-amber-200 text-2xl fa fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-lg my-4">There are many variations of passages of Lorem Ipsum
+                        available, but the
+                        majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't
+                        look even slightly
+                        believable. If you are going to use a passage of Lorem.</p>
+                    <div class="flex mb-5">
+                        <div class="mt-2 items-center">
+                            <img class="" src="images/student/student-6.png" alt="">
+                        </div>
+                        <div class="ml-2">
+                            <h1 class="text-2xl text-gray-900">Santa Akter</h1>
+                            <p class="text-lg text-gray-600">Graphic Designer</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- ans the question -->
+        <section>
+            <div class="text-center">
+                <h1 class="lg:text-5xl sm:text-4xl font-bold">Frequently Asked Questions</h1>
+                <p class="lg:text-2xl text-gray-500 pt-3 sm:hidden md:block">It is a long established fact that a reader
+                    will
+                    be
+                    distracted by the readable <br> content of a page when looking at its layout.</p>
+
+                <p class="text-2xl text-gray-500 lg:hidden text-center px-6">It is a long established fact that a reader
+                    will be distracted by the
+                    readablecontent of a page when looking at its layout.</p>
+            </div>
+            <div>
+                <div class="flex bg-sky-100 text-gray-500 px-6 py-6 h-32 mt-10">
+                    <h2 class="text-2xl font-serif font-semibold ">what are services are you compatible with?</h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                    </svg>
+
+                </div>
+                <p class="font-serif text-2xl text-gray-700 mt-4">There are many variations of passages of available,
+                    but the
+                    majority have
+                    suffered
+                    alteration in some
+                    form, by injected humour, or randomised words which don't look even slightly believable. If you are
+                    going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden.
+                </p>
+            </div>
+            <div>
+                <div class="flex border border-gray-200 text-gray-500 px-6 py-6 h-32 mt-4">
+                    <h2 class="text-2xl font-serif font-semibold pr-6">I have a technical i need resolved, who do i
+                        email?
+                    </h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </div>
+
+                <div class="flex border border-gray-200 text-gray-500 px-6 py-6 h-32 mt-4">
+                    <h2 class="text-2xl font-serif font-semibold ">what other services are you compatible with?</h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </div>
+
+                <div class="flex border border-gray-200 text-gray-500 px-6 py-6 h-32 mt-4 mb-10">
+                    <h2 class="text-2xl font-serif font-semibold ">what other services are you compatible with?</h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Companies -->
+        <section class="my-16 sm:hidden md:block">
+            <h1 class="text-5xl text-center mb-12 font-bold ">Trusted by</h1>
+            <div class="flex justify-between">
+                <div>
+                    <img src="images/company/company-1.png" alt="">
+                </div>
+                <div>
+                    <img src="images/company/company-2.png" alt="">
+                </div>
+                <div>
+                    <img src="images/company/company-3.png" alt="">
+                </div>
+                <div>
+                    <img src="images/company/company-4.png" alt="">
+                </div>
+                <div>
+                    <img src="images/company/company-5.png" alt="">
+                </div>
+                <div>
+                    <img src="images/company/company-6.png" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="bg-stone-900">
+        <div class="container mx-auto text-center py-20">
+            <div class="text-white">
+                <h1 class="text-3xl my-3 font-bold">SHT Academy</h1>
+                <p class="text-lg">Office, 1260 Mirpur,Shah-Ali Plaza, <br> Dhaka, Bangladesh</p>
+            </div>
+            <div class="my-3">
+                <a class="text-white text-lg" href="#">Privacy and Policy | </a>
+                <a class="text-white text-lg" href="#">Terms of use</a>
+            </div>
+            <div class="flex justify-center">
+                <div class="mx-5">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="fa-brands fa text-white text-3xl fa-facebook"></i>
+                    </a>
+                </div>
+                <div class="mx-5">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fa-brands fa text-white text-3xl fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="mx-5">
+                    <a href="https://twitter.com/" target="_blank">
+                        <i class="fa-brands fa text-white text-3xl fa-twitter"></i>
+                    </a>
+                </div>
+                <div class="mx-5">
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <i class="fa-brands fa text-white text-3xl fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+</body>
+
+</html>
