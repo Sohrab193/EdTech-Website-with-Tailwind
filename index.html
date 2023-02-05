@@ -155,9 +155,9 @@
             <!-- courses grid -->
             <div class="grid lg:grid-cols-2 gap-4">
                 <div
-                    class="md:flex md:flex-row items-center hover:shadow-2xl border border-slate-200 rounded bg-slate-50">
+                    class="md:flex md:flex-row  items-center hover:shadow-2xl border border-slate-200 rounded bg-slate-50">
                     <div class="md:w-1/2">
-                        <img class="sm:w-full md:h-60 sm:h-80" src="./images/course/course-1.png" alt="">
+                        <img class="w-screen md:h-60 sm:h-60" src="./images/course/course-1.png" alt="">
                     </div>
                     <div class="w-full pl-5">
                         <h1 class="text-3xl font-semibold">Fundamental Of UI/UX Design</h1>
@@ -166,11 +166,10 @@
                         <p class="text-lg font-semibold text-blue-700">Price: 20$</p>
                     </div>
                 </div>
-
                 <div
                     class="md:flex md:flex-row  items-center hover:shadow-2xl border border-slate-200 rounded bg-slate-50">
                     <div class="md:w-1/2">
-                        <img class="w-full md:h-60 sm:h-80" src="./images/course/course-2.png" alt="">
+                        <img class="w-screen md:h-60 sm:h-60" src="./images/course/course-2.png" alt="">
                     </div>
                     <div class="w-full pl-5">
                         <h1 class="text-3xl font-semibold">Javascript Basic to advanced</h1>
@@ -194,7 +193,7 @@
                     </div>
                 </div>
                 <div
-                    class=" md:hidden  lg:flex lg:flex-row items-center hover:shadow-2xl border border-slate-200 rounded bg-slate-50">
+                    class="sm:hidden md:hidden lg:flex lg:flex-row items-center hover:shadow-2xl border border-slate-200 rounded bg-slate-50">
                     <div class="w-1/2">
                         <img class="w-full" src="./images/course/course-4.png" alt="">
                     </div>
@@ -207,8 +206,8 @@
                     </div>
                 </div>
                 <div
-                    class="md:hidden lg:flex lg:flex-row items-center hover:shadow-2xl border border-slate-200 rounded bg-slate-50">
-                    <div class="">
+                    class="sm:hidden md:hidden  lg:flex lg:flex-row items-center hover:shadow-2xl border border-slate-200 rounded bg-slate-50">
+                    <div class="w-1/2">
                         <img class="w-full" src="./images/course/course-5.png" alt="">
                     </div>
                     <div class="w-full pl-5">
@@ -219,9 +218,9 @@
                     </div>
                 </div>
                 <div
-                    class="md:hidden lg:flex lg:flex-row  items-center hover:shadow-2xl border border-slate-200 rounded bg-slate-50">
-                    <div class="">
-                        <img class="w-full" src="./images/course/course-6.png" alt="">
+                    class="sm:hidden lg:flex lg:flex-row  items-center hover:shadow-2xl border border-slate-200 rounded bg-slate-50">
+                    <div class="w-1/2">
+                        <img class="w-full" src="images/course/course-6.png" alt="">
                     </div>
                     <div class="w-full pl-5">
                         <h1 class="text-3xl font-semibold">Motion Graphics</h1>
@@ -362,7 +361,7 @@
 
             <!-- student feedback carousel -->
 
-            <div id="carouselExampleCaptions" class="sm:hidden md:hidden lg:block my-10 mx-20 carousel slide relative"
+            <div id="carouselExampleCaptions" class="md:flex md:flex-col my-10 mx-20 carousel slide relative"
                 data-bs-ride="carousel">
                 <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -370,8 +369,8 @@
                 </div>
                 <div class="carousel-inner relative w-full overflow-hidden">
                     <div class="carousel-item active relative float-left w-full">
-                        <div class="flex">
-                            <div class=" border border-gray-300 px-10 mx-3">
+                        <div class="flex sm:flex-col lg:block">
+                            <div class="sm:mb-3 border border-gray-300 px-10 mx-3">
                                 <div class="flex justify-between my-7">
                                     <img src="images/comma.png" alt="">
                                     <div>
@@ -430,14 +429,14 @@
                     </div>
                 </div>
                 <button
-                    class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline -left-24"
+                    class="sm:hidden md:hidden lg:block carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline -left-24"
                     type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                     <span class="bg-blue-500 rounded-full p-5 carousel-control-prev-icon inline-block bg-no-repeat"
                         aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
                 <button
-                    class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center  text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline cursor-pointer -right-24"
+                    class="sm:hidden md:hidden lg:block carousel-control-next absolute top-0 bottom-0 flex items-center justify-center  text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline cursor-pointer -right-24"
                     type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
                     <span class="bg-blue-800 rounded-full p-5 carousel-control-next-icon inline-block bg-no-repeat"
                         aria-hidden="true"></span>
@@ -445,63 +444,7 @@
                 </button>
             </div>
 
-            <!-- for small device -->
-            <div class="flex flex-col mb-7 lg:hidden">
-                <div class="mb-5 border border-gray-300 px-10 mx-3">
-                    <div class="flex justify-between my-7">
-                        <img src="images/comma.png" alt="">
-                        <div>
-                            <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
-                            <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
-                            <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
-                            <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
-                            <i class="fa-regular text-amber-200 text-2xl fa fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-lg my-4">The job of a UI designer is to design all the screens through which a user
-                        will move and to create the visual elements—and their interactive properties—that facilitate
-                        this movement.</p>
-                    <div class="flex mb-5">
-                        <div class="mt-2 items-center">
-                            <img class="" src="images/student/student-5.png" alt="">
-                        </div>
-                        <div class="ml-2">
-                            <h1 class="text-3xl sm:text-gray-500 sm:font-semibold text-gray-900">Awlad Hossain</h1>
-                            <p class="text-2xl text-gray-500">UI Designer</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class=" border border-gray-300 px-10 mx-3">
-                    <div class="flex justify-between my-7">
-                        <img src="images/comma.png" alt="">
-                        <div>
-                            <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
-                            <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
-                            <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
-                            <i class="fa-regular text-yellow-500 text-2xl fa fa-star"></i>
-                            <i class="fa-regular text-amber-200 text-2xl fa fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-lg my-4">Graphic designers create visual concepts, using computer software or by
-                        hand, to communicate ideas that inspire, inform, and captivate consumers. They develop the
-                        overall layout and production design for applications such as advertisements, brochures,
-                        magazines, and reports.</p>
-                    <div class="flex mb-5">
-                        <div class="mt-2 items-center">
-                            <img class="" src="images/student/student-6.png" alt="">
-                        </div>
-                        <div class="ml-2">
-                            <h1 class="text-2xl text-gray-900">Santa Akter</h1>
-                            <p class="text-lg text-gray-600">Graphic Designer</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center mt-5">
-                    <button class="bg-blue-600 px-5 py-3 text-2xl text-white">See More</button>
-                </div>
-            </div>
         </section>
 
         <!-- ans the question -->
